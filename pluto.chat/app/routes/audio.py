@@ -12,6 +12,7 @@ from app.services.pinecone_client import index
 
 router = APIRouter()
 
+
 # Groq API for free Whisper transcription
 GROQ_API_KEY = os.getenv("GROQ_API_KEY", "")
 GROQ_API_URL = "https://api.groq.com/openai/v1/audio/transcriptions"
@@ -142,7 +143,6 @@ async def upload_audio(
         # Cleanup temp file
         if os.path.exists(temp_path):
             os.remove(temp_path)
-
 
 @router.get("/")
 async def list_audio(

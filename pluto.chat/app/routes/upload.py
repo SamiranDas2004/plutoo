@@ -9,7 +9,7 @@ from app.utils.auth_middleware import get_current_user
 from app.services.pinecone_client import index
 from slowapi import Limiter
 from slowapi.util import get_remote_address
-
+from langchain_core.documents import Document as LangChainDoc
 router = APIRouter()
 limiter = Limiter(key_func=get_remote_address)
 
@@ -84,7 +84,7 @@ async def upload_file(
 
     else:
         # Raw text → convert to LangChain Document
-        from langchain_core.documents import Document as LangChainDoc
+        
         documents = [LangChainDoc(page_content=text)]
         file_size = len(text.encode('utf-8'))
         filename = "raw_text.txt"

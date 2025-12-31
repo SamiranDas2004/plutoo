@@ -75,8 +75,11 @@ app.include_router(audio_router, prefix="/audio")
 app.include_router(website_router, prefix="/website")
 app.include_router(tickets_router, prefix="/tickets")
 
-# Mount static files for widget
-app.mount("/widget", StaticFiles(directory="../widget", html=True), name="widget")
+# Mount static files for widget (only if directory exists)
+import os
+widget_dir = "../widget"
+if os.path.exists(widget_dir):
+    app.mount("/widget", StaticFiles(directory=widget_dir, html=True), name="widget")
 
 @app.get("/")
 def root():

@@ -2,6 +2,10 @@ import jwt
 import os
 from datetime import datetime, timedelta
 from typing import Optional, Dict
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 SECRET_KEY = os.getenv("JWT_SECRET")
 if not SECRET_KEY:

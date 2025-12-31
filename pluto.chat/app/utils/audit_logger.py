@@ -3,9 +3,15 @@ Audit Logging System
 Logs all security-relevant events
 """
 import logging
+import os
 from datetime import datetime
 from sqlalchemy.orm import Session
 from typing import Optional
+
+# Ensure logs directory exists
+logs_dir = 'logs'
+if not os.path.exists(logs_dir):
+    os.makedirs(logs_dir, exist_ok=True)
 
 # Configure logging
 logging.basicConfig(
