@@ -10,16 +10,14 @@
             Transform your customer support with AI-powered solutions that scale with your business. Deliver exceptional experiences 24/7.
           </p>
           <div class="social-links">
-            <a href="#" class="social-link" aria-label="Twitter">
+            <a href="https://x.com/SamiranDas2004" class="social-link" aria-label="Twitter">
               <i class="fab fa-twitter"></i>
             </a>
-            <a href="#" class="social-link" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/samiran-das-dev/" class="social-link" aria-label="LinkedIn">
               <i class="fab fa-linkedin-in"></i>
             </a>
-            <a href="#" class="social-link" aria-label="Facebook">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="#" class="social-link" aria-label="Email">
+           
+            <a href="mailto:hello@plutoo.chat" class="social-link" aria-label="Email">
               <i class="fas fa-envelope"></i>
             </a>
           </div>
