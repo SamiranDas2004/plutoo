@@ -17,7 +17,7 @@
           Reduce support costs by 80% while improving customer satisfaction.
         </p>
         <div class="hero-actions">
-          <button class="btn-primary-large">
+          <button class="btn-primary-large" @click="$router.push('/signup')">
             Start Free Trial
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -30,7 +30,7 @@
             Watch Demo
           </button>
         </div>
-        <div class="trust-bar">
+        <!-- <div class="trust-bar">
           <span class="trust-text">Trusted by leading companies</span>
           <div class="company-logos">
             <div class="logo-placeholder"></div>
@@ -38,10 +38,10 @@
             <div class="logo-placeholder"></div>
             <div class="logo-placeholder"></div>
           </div>
-        </div>
+        </div> -->
         <div class="hero-stats">
           <div class="stat">
-            <div class="stat-number">10,000+</div>
+            <div class="stat-number">500+</div>
             <div class="stat-label">Active Users</div>
           </div>
           <div class="stat-divider"></div>

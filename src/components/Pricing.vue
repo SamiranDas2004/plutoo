@@ -113,7 +113,7 @@ const plans = [
       'Advanced integrations'
     ],
     buttonText: 'Start Free Trial',
-    trial: '14-day free trial',
+    trial: '',
     featured: true
   },
   {
@@ -133,7 +133,7 @@ const plans = [
       'On-premise deployment option'
     ],
     buttonText: 'Contact Sales',
-    trial: 'Custom trial available',
+    trial: '',
     featured: false
   }
 ]
