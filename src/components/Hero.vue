@@ -23,7 +23,7 @@
               <path d="M5 12h14M12 5l7 7-7 7"/>
             </svg>
           </button>
-          <button class="btn-secondary-large">
+          <button class="btn-secondary-large" @click="openDemo">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
               <polygon points="5 3 19 12 5 21 5 3"/>
             </svg>
@@ -139,9 +139,31 @@
       <div class="gradient-orb orb-2"></div>
     </div>
   </section>
+
+  <!-- Video Modal -->
+  <div v-if="showModal" class="modal-overlay" @click="showModal = false">
+    <div class="modal-content" @click.stop>
+      <button class="modal-close" @click="showModal = false">&times;</button>
+      <iframe
+        src="https://www.loom.com/embed/09b3c7aa948b474fb82dfbe6d4855752"
+        frameborder="0"
+        webkitallowfullscreen
+        mozallowfullscreen
+        allowfullscreen
+        style="width: 100%; height: 100%;"
+      ></iframe>
+    </div>
+  </div>
 </template>
 
 <script setup>
+import { ref } from 'vue';
+
+const showModal = ref(false);
+
+const openDemo = () => {
+  showModal.value = true;
+};
 </script>
 
 <style scoped>
@@ -393,6 +415,51 @@
 .card-metric {
   font-size: 0.813rem;
   color: #718096;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  position: relative;
+  width: 90%;
+  max-width: 1000px;
+  height: 80vh;
+  background: #000;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.modal-close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2.5rem;
+  cursor: pointer;
+  z-index: 10000;
+  line-height: 1;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  transition: opacity 0.2s;
+}
+
+.modal-close:hover {
+  opacity: 0.7;
   font-weight: 500;
 }
 
