@@ -22,7 +22,7 @@
         <p v-if="error" class="error">{{ error }}</p>
 
         <p class="terms">By signing up, you agree to our <a href="#">Terms</a> and <a href="#">Privacy Policy</a></p>
-        <p class="login">Already have an account? <a href="#">Sign in</a></p>
+        <p class="login">Already have an account? <a href="https://dashboard.plutoo.chat/">Sign in</a></p>
       </div>
     </div>
   </div>
